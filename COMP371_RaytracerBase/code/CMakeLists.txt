@@ -9,7 +9,7 @@ project(raytracer)
 # in the src folder; Without this file the code base will not compile therefore in your 
 # code this define is disabled
 # Also do not forget to create the src folder under code
-#add_compile_options(-DSTUDENT_SOLUTION)
+add_compile_options(-DSTUDENT_SOLUTION)
 
 
 # 2
@@ -22,7 +22,7 @@ project(raytracer)
 # When testing large scenes the debug mode will be very slow
 # so switch to release
 #set(CMAKE_BUILD_TYPE Debug)
-#set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_BUILD_TYPE Release)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -33,7 +33,7 @@ set(CMAKE_PREFIX_PATH
 
 # ENCS Eigen3 CMake setup
 if (WIN32)
-include_directories(C:/Users/ambec/Desktop/labs/COMP371_all/COMP371_RaytracerBase/code/eigen-3.4.0/)# for windows you can directly hardcode the paths to your libraries in the include
+include_directories(C:/repos/school/comp_371/COMP371_all/COMP371_RaytracerBase/code/eigen-3.4.0)# for windows you can directly hardcode the paths to your libraries in the include
 else() 
 set(ENV{EIGEN3_ROOT} /encs/pkg/eigen-3.3.7/root)
 set(CMAKE_MODULE_PATH /encs/pkg/eigen-3.3.7/root/cmake)
